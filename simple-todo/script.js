@@ -21,5 +21,7 @@ add.addEventListener("click", () => {
     deleteBtn.addEventListener("click", () => {
       li.remove();
     });
+
+    input.value = "";
   }
 });
