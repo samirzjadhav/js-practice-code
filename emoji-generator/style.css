@@ -1,0 +1,145 @@
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --accent: #06b6d4;
+  --muted: #cbd5e1;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #071029 0%, var(--bg) 100%);
+  color: var(--muted);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+}
+
+.card {
+  width: 980px;
+  max-width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
+}
+
+h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.controls > * {
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+select,
+input[type="number"] {
+  color: var(--muted);
+  border: none;
+  background: transparent;
+}
+
+button {
+  background: var(--accent);
+  color: #022;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.display {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.emoji-preview {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.emoji {
+  font-size: 42px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  min-width: 64px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.emoji:hover {
+  transform: translateY(-3px);
+  transition: all 0.15s;
+}
+
+.right {
+  width: 280px;
+}
+
+.right button {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.small {
+  font-size: 13px;
+  color: #9fb0bf;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.canvas-hidden {
+  display: none;
+}
+
+footer {
+  margin-top: 12px;
+  color: #8ca1b3;
+  font-size: 13px;
+}
+
+@media (max-width: 720px) {
+  .right {
+    width: 100%;
+  }
+  .display {
+    flex-direction: column;
+  }
+}
