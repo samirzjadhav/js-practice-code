@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reaction Speed Game</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <h1>⚡ Reaction Speed Game</h1>
+        <div class="small">
+          Click / tap the big area as fast as you can after it turns green.
+          Avoid clicking early — that's a false start.
+        </div>
+
+        <div
+          id="play"
+          class="play-area"
+          style="
+            background: #18334a;
+            margin-top: 14px;
+            border: 4px solid rgba(255, 255, 255, 0.02);
+          "
+        >
+          <div style="text-align: center">
+            <div id="message" class="big">Press <strong>Start</strong></div>
+            <div id="sub" class="small muted" style="margin-top: 6px">
+              Best: — ms · Avg: — ms
+            </div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="startBtn">Start</button>
+          <button id="stopBtn">Stop</button>
+          <button id="resetBtn">Reset</button>
+          <label class="small" style="align-self: center; margin-left: auto"
+            ><input id="strict" type="checkbox" style="margin-right: 6px" />
+            Treat early clicks as penalty</label
+          >
+        </div>
+
+        <div
+          style="margin-top: 12px; display: flex; gap: 8px; align-items: center"
+        >
+          <div class="small">
+            Press <strong>Space</strong> to Start/Stop · Press
+            <strong>C</strong> to clear stats
+          </div>
+        </div>
+
+        <footer>Made with ❤️ — no libraries required.</footer>
+      </div>
+
+      <div class="card stats">
+        <div class="stat-row">
+          <div class="small">Last results</div>
+          <div class="small muted">Stored in localStorage</div>
+        </div>
+        <div class="results" id="resultsList"></div>
+        <div style="display: flex; gap: 8px; margin-top: 8px">
+          <button id="downloadBtn">Download CSV</button>
+          <button id="clearBtn" style="background: #f97316; color: white">
+            Clear
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
