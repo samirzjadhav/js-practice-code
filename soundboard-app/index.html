@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soundboard App</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <h1>🔊 Soundboard App</h1>
+        <div class="small">
+          Click a pad or press its assigned key to play the sound. Upload custom
+          sounds, set keyboard shortcuts, and control global volume.
+        </div>
+
+        <div class="grid" id="pads"></div>
+
+        <div class="controls" style="margin-top: 12px">
+          <button id="stopAll">Stop All</button>
+          <button id="clearAll" style="background: #f97316; color: white">
+            Clear All
+          </button>
+          <button id="saveCfg">Save Config</button>
+          <button id="loadCfg">Load Config</button>
+        </div>
+
+        <footer>Made with ❤️ — HTML, CSS & Vanilla JS</footer>
+      </div>
+
+      <div class="card right">
+        <div class="row">
+          <label class="small">Global Volume</label
+          ><input
+            id="volume"
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.9"
+            style="flex: 1"
+          />
+        </div>
+        <div class="row" style="margin-top: 8px">
+          <label class="small">Preview/Generate sample tones</label>
+        </div>
+        <div class="row" style="gap: 8px; margin-top: 6px">
+          <button id="toneSine">Sine</button>
+          <button id="toneSquare">Square</button>
+          <button id="toneNoise">Noise</button>
+        </div>
+
+        <div style="margin-top: 8px" class="small muted">
+          How to assign a sound to a pad:
+        </div>
+        <ol class="small muted">
+          <li>Click a pad → Upload file or press <em>Generate</em>.</li>
+          <li>Set a keyboard key (single character) to trigger it.</li>
+          <li>Use global volume or stop all to control playback.</li>
+        </ol>
+
+        <div style="margin-top: 8px">
+          <button id="exportCfg">Export JSON</button>
+        </div>
+      </div>
+    </div>
+
+    <input type="file" id="filePicker" accept="audio/*" />
+  </body>
+</html>

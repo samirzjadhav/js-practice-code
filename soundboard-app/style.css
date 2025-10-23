@@ -1,0 +1,149 @@
+:root {
+  --bg: #071123;
+  --card: #0b1a2a;
+  --accent: #06b6d4;
+  --muted: #9fb0bf;
+} 
+ 
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+} 
+ 
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #041027, #071b2f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e6f0f6;
+  padding: 20px;
+} 
+ 
+.wrap {
+  width: 980px;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 18px;
+} 
+  
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
+} 
+ 
+h1 {
+  margin: 0;
+  font-size: 20px;
+} 
+ 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 14px;
+} 
+ 
+.pad {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+} 
+ 
+.pad strong {
+  font-size: 14px;
+} 
+ 
+.small {
+  font-size: 13px;
+  color: var(--muted);
+} 
+ 
+.controls {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+} 
+ 
+button {
+  background: var(--accent);
+  color: #022;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+} 
+ 
+input[type="file"] {
+  display: none;
+} 
+ 
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+} 
+ 
+label.small {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+} 
+ 
+.assign {
+  margin-top: 8px;
+  display: flex;
+  gap: 6px;
+  width: 100%;
+} 
+ 
+.assign input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+} 
+ 
+footer {
+  margin-top: 12px;
+  color: #8ca1b3;
+  font-size: 13px;
+} 
+ 
+.muted {
+  color: var(--muted);
+} 
+ 
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+} 
+ 
+@media (max-width: 920px) {
+  .wrap {
+    grid-template-columns: 1fr;
+  } 
+ 
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  } 
+ 
+} 
+ 
