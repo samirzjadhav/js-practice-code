@@ -1,0 +1,121 @@
+:root {
+  --bg: #0b1220;
+  --card: #0f1724;
+  --accent: #06b6d4;
+  --muted: #9fb0bf;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #071029, var(--bg));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  color: var(--muted);
+}
+
+.card {
+  width: 520px;
+  max-width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #fff;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.output-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+#passwordOutput {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.02);
+  color: #e6f0f6;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+button {
+  background: var(--accent);
+  border: none;
+  color: #022c43;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.controls {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.controls label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.meter {
+  width: 180px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.meter span {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ef4444, #f97316, #06b6d4);
+  transition: width 220ms ease;
+}
+
+footer {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+@media (max-width: 560px) {
+  .card {
+    padding: 14px;
+    width: 100%;
+  }
+}

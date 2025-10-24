@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>🔐 Password Generator</h1>
+      <p class="muted">Generate strong passwords with customizable options.</p>
+
+      <div class="output-row">
+        <input id="passwordOutput" readonly aria-label="Generated password" />
+        <button id="copyBtn">Copy</button>
+      </div>
+
+      <div class="controls">
+        <label>Length: <span id="lengthLabel">16</span></label>
+        <input type="range" id="length" min="4" max="64" value="16" />
+
+        <label
+          ><input type="checkbox" id="upper" checked /> Include Uppercase
+          (A-Z)</label
+        >
+        <label
+          ><input type="checkbox" id="lower" checked /> Include Lowercase
+          (a-z)</label
+        >
+        <label
+          ><input type="checkbox" id="numbers" checked /> Include Numbers
+          (0-9)</label
+        >
+        <label
+          ><input type="checkbox" id="symbols" checked /> Include Symbols
+          (!@#$...)</label
+        >
+
+        <div class="row">
+          <button id="generate">Generate</button>
+          <button id="shuffle">Shuffle</button>
+          <button id="download">Download .txt</button>
+        </div>
+
+        <div class="strength">
+          <div>Strength:</div>
+          <div id="meter" class="meter"><span></span></div>
+          <div id="strengthText" class="muted">—</div>
+        </div>
+      </div>
+
+      <details class="muted" style="margin-top: 12px">
+        <summary>Advanced options</summary>
+        <label
+          ><input type="checkbox" id="avoidAmbiguous" /> Avoid ambiguous
+          characters (O,0,l,1,I)</label
+        >
+        <label
+          ><input type="checkbox" id="includeSimilar" /> Allow similar-looking
+          replacements (e.g. 0 -> O)</label
+        >
+      </details>
+
+      <footer class="muted">
+        Save passwords safely. This runs fully in your browser.
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
