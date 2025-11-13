@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anime Character Finder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Anime Character Finder</h1>
+      <p class="muted">Search characters from MyAnimeList (via Jikan API)</p>
+      <div class="search">
+        <input id="query" type="text" placeholder="Search character (e.g. naruto, levi)..." />
+        <button id="searchBtn">Search</button>
+      </div>
+    </header>
+
+    <section id="results" class="results">
+      <p class="hint">Type a name and click Search to find characters.</p>
+    </section>
+
+    <!-- detail modal / panel -->
+    <aside id="detailPanel" class="detail hidden" aria-hidden="true">
+      <button id="closeDetail" class="close">✕</button>
+      <div id="detailContent"></div>
+    </aside>
+
+    <footer class="footer">Made with ❤️ • Data from Jikan (MyAnimeList). See console for errors.</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
