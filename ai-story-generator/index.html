@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AI Story + Image Creator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>AI Story Generator + Image Creator</h1>
+        <p class="muted">
+          Enter a prompt — generate a story and matching images.
+        </p>
+      </header>
+
+      <section class="controls">
+        <textarea
+          id="prompt"
+          placeholder="Write a short prompt: characters, setting, mood..."
+        ></textarea>
+
+        <div class="options">
+          <label
+            >Story length:
+            <select id="length">
+              <option value="short">Short (~150-250 words)</option>
+              <option value="medium" selected>Medium (~300-450 words)</option>
+              <option value="long">Long (~600+ words)</option>
+            </select>
+          </label>
+
+          <label
+            >Images:
+            <input type="number" id="imgCount" min="0" max="4" value="2" />
+          </label>
+
+          <label
+            >Image size:
+            <select id="imgSize">
+              <option value="512">512×512</option>
+              <option value="1024" selected>1024×1024</option>
+              <option value="256">256×256</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="buttons">
+          <button id="generateBtn">Generate Story & Images</button>
+          <button id="clearBtn" class="alt">Clear</button>
+        </div>
+
+        <div id="status" class="status muted"></div>
+      </section>
+
+      <section id="output" class="output">
+        <div class="story-panel">
+          <div class="panel-header">
+            <h2>Generated Story</h2>
+            <div class="panel-actions">
+              <button id="copyStory">Copy</button>
+              <button id="downloadStory">Download .txt</button>
+            </div>
+          </div>
+          <article id="story" class="story">
+            Nothing yet — generate a story.
+          </article>
+        </div>
+
+        <div class="images-panel">
+          <div class="panel-header">
+            <h2>Generated Images</h2>
+            <div class="panel-actions">
+              <button id="downloadAll" class="alt">Download All</button>
+            </div>
+          </div>
+          <div id="images" class="images">No images yet.</div>
+        </div>
+      </section>
+
+      <footer>Made with ❤️ — OpenAI API (server-side)</footer>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
